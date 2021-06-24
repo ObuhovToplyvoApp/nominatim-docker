@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+    nominatim:
+        ports:
+            - "8088:8080"
+        environment:
+            PBF_URL: https://download.geofabrik.de/europe/ukraine-latest.osm.pbf
+            REPLICATION_URL: https://download.geofabrik.de/europe/ukraine-updates/
+            NOMINATIM_PASSWORD: PWDpswd123!*1
+            # update once per 30 days
+            REPLICATION_UPDATE_INTERVAL: 2592000
